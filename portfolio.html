@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2009aero | Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            yt: '#FF0000',
+                            patreon: '#FF424D',
+                            ig: '#E1306C',
+                            email: '#4285F4'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'shine': 'shine 1.5s ease-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        shine: {
+                            '100%': { left: '125%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        .glass-card {
+            background: rgba(20, 20, 22, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="text-neutral-200 min-h-screen flex items-center justify-center p-4 relative overflow-hidden font-sans">
+
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-yt/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob" style="animation-delay: 2s;"></div>
+    <div class="absolute top-[40%] left-[50%] w-72 h-72 bg-brand-patreon/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob" style="animation-delay: 4s;"></div>
+
+    <main class="glass-card w-full max-w-md rounded-3xl p-8 sm:p-10 z-10 shadow-2xl relative">
+        
+        <div class="flex flex-col items-center text-center mb-10 relative">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-neutral-600 to-neutral-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                <img 
+                    src="kyle.jpg" 
+                    alt="2009aero Profile" 
+                    class="relative w-28 h-28 rounded-full object-cover border-2 border-white/10 shadow-lg"
+                    onerror="this.src='https://placehold.co/200x200/1a1a1a/ffffff?text=2009aero&font=Montserrat'"
+                >
+            </div>
+            
+            <h1 class="text-3xl font-extrabold mt-6 mb-2 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400">
+                2009aero
+            </h1>
+            <p class="text-neutral-400 font-light text-sm px-4 leading-relaxed">
+                I build stuff. Uploads every 2 weeks (sometimes earlier).
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            
+            <a href="https://www.youtube.com/@2009aero" target="_blank" rel="noopener noreferrer" 
+               class="group relative flex items-center p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-yt/50 hover:bg-brand-yt/10 transition-all duration-300 overflow-hidden">
+                <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-neutral-300 group-hover:text-brand-yt group-hover:bg-brand-yt/20 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.418-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <span class="ml-4 font-semibold text-neutral-200 group-hover:text-white transition-colors">YouTube</span>
+                <svg class="w-5 h-5 ml-auto text-neutral-500 group-hover:text-white transition-colors transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.patreon.com/c/2009aero" target="_blank" rel="noopener noreferrer" 
+               class="group relative flex items-center p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-patreon/50 hover:bg-brand-patreon/10 transition-all duration-300 overflow-hidden">
+                <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-neutral-300 group-hover:text-brand-patreon group-hover:bg-brand-patreon/20 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15.386 1.855a8.293 8.293 0 1 0 0 16.586 8.293 8.293 0 0 0 0-16.586zm-12.01 0v16.586h2.646V1.855H3.376z"/>
+                    </svg>
+                </div>
+                <span class="ml-4 font-semibold text-neutral-200 group-hover:text-white transition-colors">Patreon</span>
+                <svg class="w-5 h-5 ml-auto text-neutral-500 group-hover:text-white transition-colors transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.instagram.com/2009aeroyt/" target="_blank" rel="noopener noreferrer" 
+               class="group relative flex items-center p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-ig/50 hover:bg-brand-ig/10 transition-all duration-300 overflow-hidden">
+                <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-neutral-300 group-hover:text-brand-ig group-hover:bg-brand-ig/20 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 0 1 1.772 1.153 4.902 4.902 0 0 1 1.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 0 1-1.153 1.772 4.902 4.902 0 0 1-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 0 1-1.772-1.153 4.902 4.902 0 0 1-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 0 1 1.153-1.772A4.902 4.902 0 0 1 5.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 0 0-.748-1.15 3.098 3.098 0 0 0-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 1 1 0 10.27 5.135 5.135 0 0 1 0-10.27zm0 1.802a3.333 3.333 0 1 0 0 6.666 3.333 3.333 0 0 0 0-6.666zm5.338-3.205a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <span class="ml-4 font-semibold text-neutral-200 group-hover:text-white transition-colors">Instagram</span>
+                <svg class="w-5 h-5 ml-auto text-neutral-500 group-hover:text-white transition-colors transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+            <a href="mailto:2009aeroyt@gmail.com" 
+               class="group relative flex items-center p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-email/50 hover:bg-brand-email/10 transition-all duration-300 overflow-hidden">
+                <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-neutral-300 group-hover:text-brand-email group-hover:bg-brand-email/20 transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div class="ml-4 flex-1 grid [grid-template-areas:'stack'] items-center text-left">
+                    <span class="[grid-area:stack] font-semibold text-neutral-200 transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-2">Business Email</span>
+                    <span class="[grid-area:stack] font-semibold text-neutral-200 transition-all duration-300 opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 group-hover:text-white">2009aeroYT@gmail.com</span>
+                </div>
+                <svg class="w-5 h-5 ml-auto text-neutral-500 group-hover:text-white transition-colors transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+        </div>
+    </main>
+
+</body>
+</html>
