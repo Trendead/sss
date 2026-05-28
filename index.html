@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2009aero | Links</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -21,12 +18,11 @@
                             yt: '#FF0000',
                             patreon: '#FF424D',
                             ig: '#E1306C',
-                            email: '#4285F4'
+                            email: '#3B82F6'
                         }
                     },
                     animation: {
-                        'blob': 'blob 10s infinite',
-                        'shine': 'shine 1.5s ease-out infinite',
+                        blob: "blob 7s infinite",
                     },
                     keyframes: {
                         blob: {
@@ -44,22 +40,16 @@
         }
     </script>
     <style>
+        /* HIDE SCROLLBARS ON THE BODY */
         body {
             background-color: #050505;
+            overflow: hidden; /* This is the fix! It prevents scrolling. */
         }
         
+        /* Fallback: Make scrollbars invisible if they somehow appear */
         ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #050505; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #333; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555; 
+            width: 0px;
+            background: transparent;
         }
 
         .glass-card {
@@ -67,10 +57,25 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            /* Add a max-height and scrolling to the card itself on very small screens */
+            max-height: 95vh;
+            overflow-y: auto; 
+        }
+        
+        /* Custom scrollbar for the card if needed on tiny phones */
+        .glass-card::-webkit-scrollbar {
+            width: 4px;
+        }
+        .glass-card::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        .glass-card::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.1); 
+            border-radius: 4px;
         }
     </style>
 </head>
-<body class="text-neutral-200 min-h-screen flex items-center justify-center p-4 relative overflow-hidden font-sans">
+<body class="text-neutral-200 min-h-screen flex items-center justify-center p-4 relative font-sans">
 
     <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-yt/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob"></div>
     <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob" style="animation-delay: 2s;"></div>
